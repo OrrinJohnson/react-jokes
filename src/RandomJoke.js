@@ -54,9 +54,7 @@ class RandomJoke extends Component {
                 </div>
             )
         } else if(!this.state.isLoaded) {
-            return(
-                    <Loader />
-            )
+            return <Loader />
         } else {
             return (
                 <div>
