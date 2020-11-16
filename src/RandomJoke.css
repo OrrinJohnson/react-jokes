@@ -8,6 +8,7 @@
 
 .joke-button:hover {
     background-color: firebrick;
+    color: white;
 }
 
 .punchline {

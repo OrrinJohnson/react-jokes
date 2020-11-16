@@ -46,7 +46,9 @@ class RandomJoke extends Component {
                     onClick={this.jokeFetcher}>Another Joke?</button>
                     <p 
                     className="punchline">
-                    {this.state.show ? punchline : ""}
+                        <em>
+                            {this.state.show ? punchline : ""}
+                        </em>
                     </p>
                 </div>
             )
