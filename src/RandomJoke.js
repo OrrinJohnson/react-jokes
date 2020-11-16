@@ -33,6 +33,7 @@ class RandomJoke extends Component {
     render() {
         const punchline = this.state.data.punchline
         const joke = this.state.data.setup
+
         if(this.state.isLoaded) {
             return (
                 <div>
@@ -40,7 +41,7 @@ class RandomJoke extends Component {
                     <h3>{joke}</h3>
                     <button className="joke-button"
                     onClick={this.toggleShow}>
-                        {this.state.show ? "Hide " : "Show "}Answer
+                        {this.state.show ? "Hide" : "Show"} Answer
                     </button>
                     <button
                     className="joke-button"
