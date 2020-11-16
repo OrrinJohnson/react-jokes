@@ -1,4 +1,4 @@
-import './App.css';
+import '../styles/App.css';
 import RandomJoke from "./RandomJoke"
 
 function App() {

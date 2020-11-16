@@ -1,6 +1,6 @@
 import React, { Component } from "react"
-import { Loader } from "./Loader"
-import "./RandomJoke.css"
+import { Loader } from "../components/Loader"
+import "../styles/RandomJoke.css"
 
 class RandomJoke extends Component {
     state = {
