@@ -1,0 +1,69 @@
+import React, { Component } from "react"
+import "./RandomJoke.css"
+
+class RandomJoke extends Component {
+    state = {
+        data: [],
+        isLoaded: false,
+        show: false
+    }
+
+    async componentDidMount() {
+        const response = await fetch("https://official-joke-api.appspot.com/random_joke")
+        const json = await response.json()
+        this.setState({
+            data: json,
+            isLoaded: true
+        })
+    }
+
+    toggleShow = () => {
+        this.setState(prevState => {
+            return {
+                show: !prevState.show
+            }
+        })
+    }
+
+    jokeFetcher = () => {
+        window.location.reload(false);
+    }
+
+    render() {
+        const punchline = this.state.data.punchline
+        const joke = this.state.data.setup
+        if(this.state.isLoaded) {
+            return (
+                <div>
+                    <h1>{joke}</h1>
+                    <button className="joke-button"
+                    onClick={this.toggleShow}>
+                        {this.state.show ? "Hide " : "Show "}Answer
+                    </button>
+                    <button
+                    className="joke-button"
+                    onClick={this.jokeFetcher}>Another Joke?</button>
+                    <p 
+                    className="punchline">
+                    {this.state.show ? punchline : ""}
+                    </p>
+                </div>
+            )
+        } else if(!this.stateisLoaded) {
+            return(
+                <div>
+                    <h1>Loading the funnies...</h1>
+                </div>
+            )
+        } else {
+            return (
+                <div>
+                    <h1>Something went wrong on our end...</h1>
+                </div>
+            )
+        }
+    }
+
+}
+
+export default RandomJoke

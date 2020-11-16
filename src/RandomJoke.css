@@ -1,0 +1,15 @@
+.joke-button {
+    width: 100px;
+    height: 30px;
+    margin: 5px;
+    cursor: pointer;
+    text-align: center;
+}
+
+.joke-button:hover {
+    background-color: firebrick;
+}
+
+.punchline {
+    font-family: italic;
+}
