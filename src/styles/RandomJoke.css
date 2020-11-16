@@ -12,12 +12,7 @@
 
 .button-container button:hover {
     background-color: firebrick;
-}
-
-.joke-button:hover {
-    background-color: firebrick;
     color: white;
-    display: inline-block;
 }
 
 .punchline {
