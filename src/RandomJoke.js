@@ -1,4 +1,5 @@
 import React, { Component } from "react"
+import Loader from "./Loader"
 import "./RandomJoke.css"
 
 class RandomJoke extends Component {
@@ -54,9 +55,7 @@ class RandomJoke extends Component {
             )
         } else if(!this.state.isLoaded) {
             return(
-                <div>
-                    <h1>Loading the funnies...</h1>
-                </div>
+                    <Loader />
             )
         } else {
             return (
