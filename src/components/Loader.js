@@ -1,7 +1,7 @@
 import React from "react"
 import "../styles/Loader.css"
 
-export function Loader({ text }) {
+export function Loader() {
     return (
         <div className="loader-container">
             <div className="loader">
