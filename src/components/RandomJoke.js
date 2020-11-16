@@ -39,13 +39,10 @@ class RandomJoke extends Component {
                 <div>
                 <h1>{this.props.title}</h1>
                     <h3>{joke}</h3>
-                    <button className="joke-button"
-                    onClick={this.toggleShow}>
-                        {this.state.show ? "Hide" : "Show"} Answer
-                    </button>
-                    <button
-                    className="joke-button"
-                    onClick={this.jokeFetcher}>Another Joke?</button>
+                    <div className="button-container">
+                        <button onClick={this.toggleShow}>{this.state.show ? "Hide" : "Show"} Answer</button>
+                        <button onClick={this.jokeFetcher}>Another Joke?</button>
+                    </div>
                     <p 
                     className="punchline">
                         <em>
