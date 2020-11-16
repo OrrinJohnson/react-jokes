@@ -5,7 +5,7 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <RandomJoke />
+        <RandomJoke title="Jokes App!"/>
       </header>
     </div>
   );

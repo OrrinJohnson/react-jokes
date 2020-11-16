@@ -35,7 +35,8 @@ class RandomJoke extends Component {
         if(this.state.isLoaded) {
             return (
                 <div>
-                    <h1>{joke}</h1>
+                <h1>{this.props.title}</h1>
+                    <h3>{joke}</h3>
                     <button className="joke-button"
                     onClick={this.toggleShow}>
                         {this.state.show ? "Hide " : "Show "}Answer
