@@ -50,7 +50,7 @@ class RandomJoke extends Component {
                     </p>
                 </div>
             )
-        } else if(!this.stateisLoaded) {
+        } else if(!this.state.isLoaded) {
             return(
                 <div>
                     <h1>Loading the funnies...</h1>
