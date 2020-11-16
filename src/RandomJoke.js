@@ -1,5 +1,5 @@
 import React, { Component } from "react"
-import Loader from "./Loader"
+import { Loader } from "./Loader"
 import "./RandomJoke.css"
 
 class RandomJoke extends Component {
