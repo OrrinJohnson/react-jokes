@@ -64,7 +64,6 @@ class RandomJoke extends Component {
             )
         }
     }
-
 }
 
 export default RandomJoke
