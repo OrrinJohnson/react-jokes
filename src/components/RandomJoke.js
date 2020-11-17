@@ -34,7 +34,7 @@ class RandomJoke extends Component {
         const punchline = this.state.data.punchline
         const joke = this.state.data.setup
 
-        if(this.state.isLoaded) {
+        if (this.state.isLoaded) {
             return (
                 <div>
                 <h1>{this.props.title}</h1>
@@ -51,7 +51,7 @@ class RandomJoke extends Component {
                     </p>
                 </div>
             )
-        } else if(!this.state.isLoaded) {
+        } else if (!this.state.isLoaded) {
             return <Loader />
         } else {
             return (
