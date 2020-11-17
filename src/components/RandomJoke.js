@@ -4,16 +4,16 @@ import "../styles/RandomJoke.css"
 
 class RandomJoke extends Component {
     state = {
-        data: [],
+        data: {},
         isLoaded: false,
-        show: false
+        showJoke: false
     }
 
     async componentDidMount() {
         const response = await fetch("https://official-joke-api.appspot.com/random_joke")
-        const json = await response.json()
+        const jsonResponse = await response.json()
         this.setState({
-            data: json,
+            data: jsonResponse,
             isLoaded: true
         })
     }
@@ -21,7 +21,7 @@ class RandomJoke extends Component {
     toggleShow = () => {
         this.setState(prevState => {
             return {
-                show: !prevState.show
+                showJoke: !prevState.showJoke
             }
         })
     }
@@ -40,13 +40,13 @@ class RandomJoke extends Component {
                 <h1>{this.props.title}</h1>
                     <h3>{joke}</h3>
                     <div className="button-container">
-                        <button onClick={this.toggleShow}>{this.state.show ? "Hide" : "Show"} Answer</button>
+                        <button onClick={this.toggleShow}>{this.state.showJoke ? "Hide" : "Show"} Answer</button>
                         <button onClick={this.jokeFetcher}>Another Joke?</button>
                     </div>
                     <p 
                     className="punchline">
                         <em>
-                            {this.state.show ? punchline : ""}
+                            {this.state.showJoke ? punchline : ""}
                         </em>
                     </p>
                 </div>

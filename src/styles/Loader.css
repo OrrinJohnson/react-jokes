@@ -9,11 +9,11 @@
 
 .loader {
     margin-top: 16px;
-    border-top: 10px solid #58b647;
+    border-top: 10px solid #58a647;
     border-right: 10px solid rgba(136, 136, 136, 0.2);
     border-bottom: 10px solid rgba(136, 136, 136, 0.2);
     border-left: 10px solid rgba(136, 136, 136, 0.2);
-    animation: spinner 1.2s linear infinite;
+    animation: spinner 0.7s linear infinite;
     border-radius: 50%;
     width: 60px;
     height: 60px;
